@@ -1,5 +1,4 @@
-name: GTFS Pipeline
-
+name: GTFS-Pipeline
 on:
   schedule:
     - cron: '0 3 * * 1'   # every Monday 03:00 UTC
@@ -8,7 +7,7 @@ on:
       skip_shapes:
         description: 'Skip shape generation'
         type: boolean
-        default: false
+        default: true
       shape_method:
         description: 'Shape generation method'
         type: choice
