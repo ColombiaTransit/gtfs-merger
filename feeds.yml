@@ -1,13 +1,14 @@
 feeds:
   # Public feed via URL
-  - name: feed_a
-    url: https://example.com/gtfs/feed_a.zip
+  - name: bogota
+    url: https://storage.googleapis.com/gtfs-estaticos/GTFS_20260505.zip
 
   # Feed behind a token — store the token in GitHub Secrets as FEED_B_TOKEN
   # and reference it in the workflow env block
-  - name: feed_b
-    url: https://example.com/gtfs/feed_b.zip?token=${FEED_B_TOKEN}
+  # https://example.com/gtfs/feed_b.zip?token=${FEED_B_TOKEN}
+  - name: medellin-metro
+    url: data/medellin-metro.zip
 
   # Local file committed to the repo
-  - name: feed_c
-    path: data/feed_c.zip
+  #- name: feed_c
+  #  path: data/feed_c.zip
