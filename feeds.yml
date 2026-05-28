@@ -1,0 +1,13 @@
+feeds:
+  # Public feed via URL
+  - name: feed_a
+    url: https://example.com/gtfs/feed_a.zip
+
+  # Feed behind a token — store the token in GitHub Secrets as FEED_B_TOKEN
+  # and reference it in the workflow env block
+  - name: feed_b
+    url: https://example.com/gtfs/feed_b.zip?token=${FEED_B_TOKEN}
+
+  # Local file committed to the repo
+  - name: feed_c
+    path: data/feed_c.zip
